@@ -1,9 +1,8 @@
 <xml xmlns="http://www.w3.org/1999/xhtml">
-  <block type="controls_whileUntil" id="34" inline="false" x="76" y="64">
-    <field name="MODE">UNTIL</field>
-    <value name="NUMBER">
-      <block type="sensor_button" id="62">
-        <field name="OBJECT">UP</field>
+  <block type="controls_repeat" id="222" inline="true" x="43" y="42">
+    <value name="TIMES">
+      <block type="math_number" id="229">
+        <field name="NUM">5</field>
       </block>
     </value>
     <statement name="DO">
@@ -45,5 +44,31 @@
         </next>
       </block>
     </statement>
+    <next>
+      <block type="movement_stop" id="249">
+        <next>
+          <block type="controls_repeat" id="265" inline="true">
+            <value name="TIMES">
+              <block type="math_number" id="282">
+                <field name="NUM">10</field>
+              </block>
+            </value>
+            <statement name="DO">
+              <block type="movement_right" id="292">
+                <next>
+                  <block type="robot_delay" id="293" inline="true">
+                    <value name="DELAY">
+                      <block type="math_number" id="294">
+                        <field name="NUM">200</field>
+                      </block>
+                    </value>
+                  </block>
+                </next>
+              </block>
+            </statement>
+          </block>
+        </next>
+      </block>
+    </next>
   </block>
 </xml>
